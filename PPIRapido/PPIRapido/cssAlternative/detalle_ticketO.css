@@ -1,0 +1,351 @@
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --button-bg-color: #007bff; /* Azul8 para modo claro */
+    --button-text-color: #ffffff;
+    --link-color: #007bff;
+    --link-hover-color: #0056b3;
+    --toggle-bg-color: #000000;
+    --toggle-text-color: #ffffff;
+    --container-bg-color: #f9f9f9;
+    --container-dark-bg-color: #1e1e1e;
+    --modal-bg-color: #ffffff;
+    --modal-text-color: #000000;
+    --modal-header-bg-color: #f5f5f5;
+    --modal-header-text-color: #000000;
+    --modal-footer-bg-color: #f5f5f5;
+    --modal-footer-text-color: #000000;
+    --modal-body-bg-color: #ffffff;
+    --modal-body-text-color: #000000;
+    --modal-color-box: #ffffff;
+}
+
+.dark-mode {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --button-bg-color: #6a0dad; /* Púrpura para modo oscuro */
+    --button-text-color: #ffffff;
+    --link-color: #4dabf7;
+    --link-hover-color: #0096c7;
+    --toggle-bg-color: #ffffff;
+    --toggle-text-color: #000000;
+    --container-bg-color: #1e1e1e;
+    --modal-bg-color: #2f2f2f;
+    --modal-body-text-color: #ffffff;
+    --modal-color-box: #383838;
+
+
+    /* No se aplican estilos específicos del modal en modo oscuro */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 20px;
+    margin-bottom: 50px;
+    margin-top: 80px;
+    padding: 20px;
+    background-color: var(--container-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.ticket-table th,
+.ticket-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.ticket-table th {
+    background-color: #333;
+    color: white;
+}
+
+.refresh-button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+.refresh-button:hover {
+    background-color: var(--link-hover-color);
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body.dark-mode .container {
+    background-color: var(--container-dark-bg-color);
+}
+
+button,
+a {
+    background-color: inherit;
+    color: inherit;
+}
+
+/* Modal */
+.modal-content {
+    background-color: var(--modal-bg-color);
+    color: var(--modal-text-color);
+}
+
+.modal-header {
+    background-color: var(--modal-header-bg-color);
+    color: var(--modal-header-text-color);
+}
+
+.modal-body {
+    background-color: var(--modal-body-bg-color);
+    color: var(--modal-body-text-color);
+}
+
+.modal-footer {
+    background-color: var(--modal-footer-bg-color);
+    color: var(--modal-footer-text-color);
+}
+
+.modal-footer .btn-secondary {
+    background-color: #6c757d;
+    color: #ffffff;
+}
+
+.modal-footer .btn-danger {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+  /* Estilos personalizados para los inputs */
+  .ticket-table input[type="text"],
+  .ticket-table input[type="email"],
+  .ticket-table input[type="date"],
+  #seleccionador,
+  .ticket-table textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      background-color: #f9f9f9;
+      transition: background-color 0.3s ease;
+  }
+
+  .ticket-table input[type="text"]:focus,
+  .ticket-table input[type="email"]:focus,
+  .ticket-table input[type="date"]:focus,
+  .ticket-table textarea:focus {
+      background-color: #e6f7ff;
+      outline: none;
+      border-color: #007bff;
+  }
+
+  .ticket-table textarea {
+      resize: vertical;
+  }
+
+  /* Estilo para los botones */
+  .refresh-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      transition: background-color 0.3s ease;
+  }
+
+  .refresh-button:hover {
+      background-color: #0056b3;
+  }
+  .comments-section {
+    background-color: var(--modal-bg-color);;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment {
+    background-color: var(--modal-color-box);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--modal-body-text-color);
+}
+
+.user-comment {
+    margin-bottom: 10px;
+    color: var(--modal-body-text-color);
+}
+
+.comment-date {
+    font-size: 0.8em;
+    color: var(--modal-body-text-color);
+    text-align: right;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.pagination a {
+    color: #007bff;
+    padding: 8px 12px;
+    text-decoration: none;
+    margin: 0 5px;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+.pagination a.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.pagination a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .comments-section {
+        padding: 15px;
+    }
+
+    .comment {
+        padding: 10px;
+    }
+
+    .pagination a {
+        padding: 6px 8px;
+    }
+}
+/* Mejora para los campos de entrada de texto */
+input[type="text"], input[type="email"], textarea {
+    width: 100%; /* Para que el campo se ajuste al contenedor */
+    padding: 10px; /* Espaciado interno para que el texto no quede pegado a los bordes */
+    margin: 8px 0; /* Margen superior e inferior para separación entre elementos */
+    box-sizing: border-box; /* Para incluir el padding dentro del ancho total del campo */
+    border: 2px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo ligeramente gris */
+    font-size: 16px; /* Tamaño de fuente cómodo */
+    transition: border-color 0.3s ease, background-color 0.3s ease; /* Transiciones suaves para foco */
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #007bff; /* Cambia el color del borde al hacer foco */
+    background-color: #fff; /* Fondo blanco al hacer foco */
+    outline: none; /* Elimina el borde de foco predeterminado */
+}
+
+/* Mejora específica para el campo de comentarios */
+textarea {
+    height: 150px; /* Altura personalizada para el área de texto */
+    resize: vertical; /* Permite solo el redimensionamiento vertical */
+}
+
+/* Mejora para el botón de agregar comentario */
+button.refresh-button {
+    background-color: #007bff; /* Color de fondo azul Bootstrap */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno para que el botón se vea mejor */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efectos de transición */
+}
+
+button.refresh-button:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de agrandamiento al hacer hover */
+}
+
+/* Mejora para los comentarios */
+.comments-section {
+    margin-top: 20px;
+}
+
+#comments-container .user-name {
+    font-weight: bold; /* Nombre de usuario en negrita */
+    color: #007bff; /* Nombre de usuario en color azul */
+}
+
+#comments-container .user-comment {
+    margin: 5px 0 10px; /* Separación entre el texto del comentario */
+    font-size: 15px; /* Tamaño de fuente cómodo */
+}
+
+#comments-container .comment-date {
+    font-size: 12px; /* Fecha en tamaño más pequeño */
+    color: #888; /* Color gris para la fecha */
+}
+
+/* Paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.pagination .page-link {
+    padding: 8px 12px;
+    margin: 0 5px;
+    background-color: #007bff; /* Fondo azul */
+    color: white; /* Texto blanco */
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.pagination .page-link:hover {
+    background-color: #0056b3; /* Fondo más oscuro al hacer hover */
+}

@@ -1,0 +1,121 @@
+:root {
+    /* Variables para modo claro */
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --button-bg-color: #333333;
+    --button-text-color: #ffffff;
+    --link-color: #007bff;
+    --link-hover-color: #0056b3;
+    --toggle-bg-color: #000000;
+    --toggle-text-color: #ffffff;
+}
+
+.dark-mode {
+    /* Variables para modo oscuro */
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --button-bg-color: #555555;
+    --button-text-color: #ffffff;
+    --link-color: #4dabf7;
+    --link-hover-color: #0096c7;
+    --toggle-bg-color: #ffffff;
+    --toggle-text-color: #000000;
+}
+
+/* Estilos generales del body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #dfdede;
+    --bs-body-bg: var(--background-color);
+    color: var(--text-color); /* Aplica el color de texto global */
+}
+
+/* Layout principal */
+#main-content {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    gap: 20px; /* Espaciado entre contenedores */
+}
+
+/* Contenedor principal */
+.border {
+    /* Ancho uniforme */
+    flex: 1; /* Hace que los contenedores se adapten al mismo ancho */
+    max-width: 70%; /* Límite para que mantengan un largo uniforme */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    overflow-wrap: break-word; /* Permite saltos de línea para textos largos */
+    word-wrap: break-word;
+    word-break: break-word;
+    height: auto; /* Ajusta la altura al contenido */
+}
+
+/* Barra lateral */
+.sidebar {
+    flex: 0.3; /* Hace que la barra lateral ocupe el mismo espacio */
+    max-width: 30%; /* Asegura que el largo se mantenga consistente */
+    background-color: #004d61;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    height: auto; /* Ajusta la altura al contenido */
+}
+
+/* Elementos de texto */
+h2, h3 {
+    margin: 0 0 10px;
+}
+
+p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+/* Pie de página */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Logo */
+.logo {
+    float: left;
+    margin-left: 10px;
+}
+
+/* Centrado personalizado */
+.Personal-center {
+    text-align: center;
+    color: var(--text-color); /* Asegura que el color del texto sea dinámico */
+}
+
+/* Botón para alternar tema */
+#theme-toggle-button {
+    position: fixed;
+    bottom: 65px;
+    right: 15px;
+    background-color: var(--toggle-bg-color);
+    color: var(--toggle-text-color);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 16px; /* Tamaño del texto dentro del botón */
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
+}

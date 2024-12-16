@@ -1,0 +1,180 @@
+.asistencia-virtual {
+    position: fixed;
+    bottom: 85px; /* Aumenta el valor para moverlo más arriba */
+    right: 10px;
+    z-index: 1000;
+}
+
+.chatbot {
+    display: flex;
+    align-items: center;
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 15px;
+    border-radius: 30px; /* Bordes redondeados */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s; /* Transición suave para hover */
+}
+
+.chatbot:hover {
+    background-color: #45a049; /* Cambio de color al pasar el ratón */
+}
+
+.chatbot__img {
+    margin-right: 10px; /* Espacio entre imagen y texto */
+}
+
+.chatbot-options {
+    margin-top: 10px; /* Espacio superior para las opciones */
+    background-color: rgba(255, 255, 255, 0); /* Fondo transparente */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none; /* Oculto inicialmente */
+    padding: 10px; /* Espacio interno */
+    backdrop-filter: blur(10px); /* Borra el fondo detrás del menú */
+}
+
+.floatingMenu {
+    list-style: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+}
+
+.option-button {
+    background-color: rgba(76, 175, 80, 0.9); /* Color de fondo con transparencia */
+    color: white; /* Color del texto */
+    border: none;
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    margin: 5px 0; /* Espaciado entre botones */
+    transition: background-color 0.3s;
+    width: 100%; /* Ancho completo */
+}
+
+.option-button:hover {
+    background-color: rgba(69, 160, 73, 0.9); /* Cambio de color al pasar el ratón */
+}
+
+.suboption-link {
+    display: block;
+    color: #4CAF50; /* Color del enlace */
+    margin: 5px 0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.suboption-link:hover {
+    color: #45a049; /* Cambio de color al pasar el ratón */
+}
+.chat-window {
+    width: 300px;
+    height: 400px;
+    position: fixed;   /* Se asegura de que la ventana permanezca en la misma posición */
+    bottom: 40px;      /* Posiciona el chatbot en la parte inferior */
+    right: 10px;       /* Alinea el chatbot a la derecha */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;     /* Oculto por defecto */
+    flex-direction: column;
+    z-index: 9999;     /* Asegura que se muestre por encima de todos los elementos */
+}
+
+.chat-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-header h2 {
+    margin: 0;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.chat-body {
+    padding: 10px;
+    flex: 1;
+    overflow-y: auto; /* Habilita el scroll vertical */
+    max-height: 300px; /* Limita la altura */
+}
+
+.bot-message .message {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.user-message .message {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 90%;
+}
+
+.user-options {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección de los botones a vertical */
+    gap: 10px; /* Agrega espacio entre los botones */
+    margin-top: 10px; /* Espacio en la parte superior */
+}
+
+.bot-message .message, .user-message .message {
+    word-wrap: break-word; /* Rompe palabras largas */
+    max-width: 90%; /* Evita que los mensajes se desborden */
+}
+.bot-message, .user-message {
+    margin-bottom: 10px; /* Espacio entre mensajes */
+}
+.option-button:hover {
+    background-color: #ddd;
+}
+
+.chat-footer {
+    padding: 10px;
+    background-color: #f1f1f1;
+    display: flex;
+    gap: 10px;
+}
+
+.chat-footer input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.chat-footer button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.faq-link {
+    color: white; /* Cambia el color del texto a blanco */
+    text-decoration: underline; /* Mantiene el subrayado */
+    cursor: pointer; /* Cambia el cursor al puntero */
+}
+
+.faq-link:hover {
+    color: #ffcc00; /* Color amarillo al pasar el cursor */
+    text-decoration: underline; /* Mantiene el subrayado al pasar el ratón */
+}
